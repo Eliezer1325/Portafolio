@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://eliezer1325.github.io/Portafolio/sitemap.xml

@@ -1,0 +1,929 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<style>:root{color-scheme:dark}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<link rel="canonical" href="https://eliezer1325.github.io/Portafolio/">
+<title>Eliezer Palpan León | Data Science, Analytics y Automatización</title>
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="author" content="Eliezer Palpan León">
+<meta name="keywords" content="Eliezer Palpan, Eliezer Palpan León, Data Science, Data Analytics, Business Intelligence, Power BI, Python, SQL, automatización, Perú">
+<meta property="og:url" content="https://eliezer1325.github.io/Portafolio/">
+<meta property="og:locale" content="es_PE">
+<meta property="og:site_name" content="Eliezer Palpan León">
+<meta name="twitter:card" content="summary">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Eliezer Palpan León","alternateName":"Eliezer Palpan","jobTitle":"Data Science","url":"https://eliezer1325.github.io/Portafolio/","sameAs":["https://www.linkedin.com/in/eliezer-palpan-leon-a01479212/"],"knowsAbout":["Data Science","Business Intelligence","Power BI","Python","SQL","Automatización de procesos","RPA"],"address":{"@type":"PostalAddress","addressLocality":"Lima","addressCountry":"PE"}}</script>
+<meta name="description" content="Portafolio de Eliezer Palpan León: analítica de datos, Business Intelligence y automatización de procesos.">
+<meta property="og:title" content="Eliezer Palpan León · Datos, automatización y negocio">
+<meta property="og:description" content="Convierto datos y procesos complejos en soluciones automatizadas, análisis accionables y mejores decisiones de negocio.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Public+Sans:wght@400;500;600&display=swap">
+<style>
+/* Layout: columna editorial, tarjetas en rejilla y un carrusel de demos animadas con datos ficticios como gesto central. */
+:root{
+  --bg:#0b0e13;
+  --surface:#12171f;
+  --surface-2:#171d27;
+  --line:#242c39;
+  --fg:#e8ecf2;
+  --muted:#93a0b3;
+  --accent:#3dd6f5;
+  --accent-ink:#04141a;
+  --accent-soft:rgba(61,214,245,.12);
+  --warn:#f2b84b;
+  /* editor de código: superficie propia, oscura en ambos temas */
+  --ed-bg:#0e131a;--ed-bar:#151c26;--ed-line:#222c3a;--ed-fg:#d6dde9;--ed-mut:#6b7a90;
+  --ed-k:#c792ea;--ed-s:#a5e075;--ed-f:#6cb6ff;--ed-c:#6b7a90;
+  --font-display:"JetBrains Mono",ui-monospace,Menlo,Consolas,monospace;
+  --font-body:"Public Sans","Segoe UI",system-ui,sans-serif;
+  --font-mono:"JetBrains Mono",ui-monospace,Menlo,Consolas,monospace;
+  color-scheme:dark;
+}
+@media (prefers-color-scheme: light){
+  :root:not([data-theme="dark"]){
+    --bg:#f5f7fa;--surface:#ffffff;--surface-2:#eef2f7;--line:#d8dfe9;--fg:#0f1620;--muted:#566377;
+    --accent:#0a6be0;--accent-ink:#ffffff;--accent-soft:rgba(10,107,224,.1);--warn:#9a6700;color-scheme:light;
+  }
+}
+:root[data-theme="light"]{
+  --bg:#f5f7fa;--surface:#ffffff;--surface-2:#eef2f7;--line:#d8dfe9;--fg:#0f1620;--muted:#566377;
+  --accent:#0a6be0;--accent-ink:#ffffff;--accent-soft:rgba(10,107,224,.1);--warn:#9a6700;color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--fg);font-family:var(--font-body);font-size:16px;line-height:1.6;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:0}
+.wrap{max-width:1120px;margin:0 auto}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+h1,h2,h3{font-family:var(--font-display);line-height:1.1;margin:0;text-wrap:balance;letter-spacing:-.02em}
+p{margin:0}
+.eyebrow{font-family:var(--font-mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
+.muted{color:var(--muted)}
+
+/* nav */
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--bg)}
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);
+  margin-left:calc(-1*max(16px,env(safe-area-inset-left,0px)));margin-right:calc(-1*max(16px,env(safe-area-inset-right,0px)));
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.nav .wrap{display:flex;align-items:center;gap:20px;min-height:56px;flex-wrap:wrap;padding-block:8px}
+.brand{font-family:var(--font-display);font-weight:700;text-decoration:none;font-size:18px;margin-right:auto}
+.nav-links{display:flex;gap:2px;flex-wrap:wrap}
+.nav-links a{font-size:14px;text-decoration:none;color:var(--muted);padding:6px 9px;border-radius:6px}
+.nav-links a:hover{color:var(--fg);background:var(--surface-2)}
+.icon-btn{background:transparent;border:1px solid var(--line);color:var(--fg);border-radius:8px;height:36px;padding:0 12px;font:inherit;font-size:13px;cursor:pointer}
+.icon-btn:hover{border-color:var(--accent)}
+
+/* hero */
+.hero{padding-block:clamp(40px,7vw,88px) clamp(40px,6vw,72px);display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:clamp(28px,5vw,64px);align-items:center}
+.hero h1{font-size:clamp(38px,6vw,68px);font-weight:700;margin:14px 0 20px}
+.hero .lead{font-size:clamp(17px,2vw,20px);color:var(--muted);max-width:56ch}
+.hero .lead strong{color:var(--fg);font-weight:500}
+.cta-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.btn{display:inline-flex;align-items:center;gap:8px;height:46px;padding:0 20px;border-radius:10px;font-weight:600;font-size:15px;text-decoration:none;border:1px solid var(--line);color:var(--fg);background:transparent;cursor:pointer;font-family:var(--font-body)}
+.btn:hover{border-color:var(--accent)}
+.btn.primary{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.btn.primary:hover{filter:brightness(1.08)}
+.hero-meta{margin-top:22px;font-family:var(--font-mono);font-size:12px;color:var(--muted)}
+
+.timecard{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:22px;min-width:0}
+.timecard h3{font-size:15px;font-family:var(--font-body);font-weight:600;letter-spacing:0}
+.timecard .sub{font-size:13px;color:var(--muted);margin-top:2px}
+.bars{display:grid;gap:14px;margin:22px 0 16px}
+.bar-row .lbl{display:flex;justify-content:space-between;font-family:var(--font-mono);font-size:12px;color:var(--muted);margin-bottom:6px;gap:8px}
+.bar-row .lbl b{color:var(--fg);font-weight:500}
+.track{height:18px;background:var(--surface-2);border-radius:5px;overflow:hidden}
+.fill{height:100%;border-radius:5px}
+.fill.before{width:100%;background:var(--muted);opacity:.55}
+.fill.after{width:6.667%;background:var(--accent);min-width:6px}
+.tc-foot{display:flex;gap:18px;flex-wrap:wrap;font-family:var(--font-mono);font-size:12px;color:var(--muted);border-top:1px solid var(--line);padding-top:14px}
+.tc-foot b{color:var(--accent);font-weight:500}
+.disclaimer{font-size:12px;color:var(--muted);margin-top:12px}
+
+/* sections */
+section{padding-block:clamp(48px,7vw,96px);border-top:1px solid var(--line);scroll-margin-top:60px}
+.sec-head{display:grid;gap:10px;margin-bottom:36px;max-width:760px}
+.sec-head h2{font-size:clamp(28px,4vw,42px)}
+.sec-head p{color:var(--muted);font-size:17px}
+
+.about{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,5vw,64px)}
+.about p+p{margin-top:16px}
+.about .col p{color:var(--muted)}
+.about .col p strong{color:var(--fg);font-weight:500}
+.facts{display:grid;gap:0;border:1px solid var(--line);border-radius:14px;overflow:hidden;align-self:start}
+.fact{display:grid;grid-template-columns:130px minmax(0,1fr);gap:12px;padding:14px 18px;border-bottom:1px solid var(--line);font-size:14px}
+.fact:last-child{border-bottom:0}
+.fact dt{font-family:var(--font-mono);font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;padding-top:2px}
+.fact dd{margin:0}
+
+/* demos */
+.demo{border:1px solid var(--line);border-radius:16px;background:var(--surface);min-width:0;overflow:hidden}
+.demo-tabs{display:flex;gap:6px;padding:10px;border-bottom:1px solid var(--line);overflow-x:auto}
+.demo-tabs button{flex:none;font:500 13px var(--font-body);color:var(--muted);background:transparent;border:1px solid transparent;border-radius:8px;padding:8px 12px;cursor:pointer;white-space:nowrap}
+.demo-tabs button:hover{color:var(--fg)}
+.demo-tabs button[aria-selected="true"]{color:var(--accent);background:var(--accent-soft);border-color:var(--accent)}
+.slides{padding:clamp(16px,3vw,28px)}
+.slide{display:none}
+.slide.on{display:grid;grid-template-columns:minmax(0,.75fr) minmax(0,1.25fr);gap:clamp(18px,3vw,32px);align-items:start}
+.slide-text{display:grid;gap:12px}
+.slide-text h3{font-size:clamp(22px,3vw,28px)}
+.slide-text p{color:var(--muted);font-size:15px}
+.slide-text ul{margin:0;padding-left:18px;color:var(--muted);font-size:14px;display:grid;gap:4px}
+.stage{min-width:0;display:grid;gap:12px}
+.demo-foot{display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap;padding:12px 16px;border-top:1px solid var(--line);font-size:12px;color:var(--muted)}
+.demo-ctl{display:flex;gap:8px}
+.demo-ctl .icon-btn{height:32px;padding:0 12px}
+.win{border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--bg);min-width:0}
+.win-bar{display:flex;align-items:center;gap:6px;padding:9px 12px;border-bottom:1px solid var(--line);font-family:var(--font-mono);font-size:11px;color:var(--muted);background:var(--surface-2)}
+.win-bar i{width:9px;height:9px;border-radius:50%;background:var(--line);display:block;flex:none}
+.win-bar span{margin-left:8px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.win.ed{background:var(--ed-bg);border-color:var(--ed-line)}
+.win.ed .win-bar{background:var(--ed-bar);border-bottom-color:var(--ed-line);color:var(--ed-mut)}
+.win.ed .win-bar i{background:var(--ed-line)}
+.code{margin:0;padding:14px;font:12.5px/1.65 var(--font-mono);color:var(--ed-fg);overflow-x:auto;min-height:230px;white-space:pre}
+.code .ln{display:block;animation:in .3s both}
+.code .k{color:var(--ed-k)}.code .s{color:var(--ed-s)}.code .f{color:var(--ed-f)}.code .c{color:var(--ed-c)}
+.out{border:1px solid var(--line);border-radius:12px;padding:6px 12px;overflow-x:auto;background:var(--surface)}
+.tbl{width:100%;border-collapse:collapse;font-size:13px;font-variant-numeric:tabular-nums;min-width:320px}
+.tbl th{text-align:left;font:500 11px var(--font-mono);color:var(--muted);letter-spacing:.06em;padding:8px 6px;border-bottom:1px solid var(--line)}
+.tbl td{padding:8px 6px;border-bottom:1px solid var(--line)}
+.tbl tr:last-child td{border-bottom:0}
+.tbl tbody tr{animation:in .35s both}
+.mb{display:inline-block;width:64px;height:6px;background:var(--surface-2);border-radius:3px;vertical-align:middle;margin-right:8px;overflow:hidden}
+.mb i{display:block;height:100%;background:var(--accent)}
+.bi{padding:14px;display:grid;gap:12px}
+.chips{display:flex;gap:6px;flex-wrap:wrap}
+.chips button{font:500 12px var(--font-body);border:1px solid var(--line);background:transparent;color:var(--muted);border-radius:99px;padding:5px 11px;cursor:pointer}
+.chips button[aria-pressed="true"]{color:var(--accent);border-color:var(--accent);background:var(--accent-soft)}
+.kp{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.kp div{border:1px solid var(--line);border-radius:10px;padding:10px;background:var(--surface)}
+.kp b{display:block;font:700 22px var(--font-display);font-variant-numeric:tabular-nums}
+.kp span{font-size:11px;color:var(--muted)}
+.chart{width:100%;height:auto;display:block}
+.gl{stroke:var(--line);stroke-width:1}
+.bar{fill:var(--accent);transform-box:fill-box;transform-origin:bottom;animation:grow .6s both}
+.tx{fill:var(--muted);font:10px var(--font-mono)}
+.tv{fill:var(--fg);font:10px var(--font-mono)}
+.hub{padding:14px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.hub button{display:grid;gap:8px;justify-items:center;text-align:center;font:500 12px var(--font-body);color:var(--fg);background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:12px 6px;cursor:pointer;transition:border-color .2s,background .2s}
+.hub button.on{border-color:var(--accent);background:var(--accent-soft)}
+.ic rect{fill:var(--accent)}
+.pv{margin:0 14px 14px;border:1px solid var(--line);border-radius:10px;padding:12px;background:var(--surface)}
+.pv h4{margin:0 0 10px;font:600 13px var(--font-body)}
+.pvbars{display:flex;align-items:flex-end;gap:6px;height:80px}
+.pvbars i{flex:1;background:var(--accent);border-radius:3px 3px 0 0;transition:height .6s;height:0}
+.flow{padding:14px}
+.nd{display:grid;grid-template-columns:24px minmax(0,1fr);gap:12px;align-items:center;padding:8px 0;position:relative}
+.nd .dot{width:22px;height:22px;border-radius:50%;border:2px solid var(--line);display:grid;place-items:center;font-size:12px;color:var(--accent-ink);background:transparent}
+.nd .t{font-size:14px;color:var(--muted)}
+.nd:not(:last-child)::before{content:"";position:absolute;left:11px;top:34px;bottom:-8px;width:2px;background:var(--line)}
+.nd.run .dot{border-color:var(--accent);animation:pulse 1s infinite}
+.nd.run .t,.nd.ok .t{color:var(--fg)}
+.nd.ok .dot{background:var(--accent);border-color:var(--accent)}
+.nd.ok .dot::after{content:"✓"}
+.nd.ok:not(:last-child)::before{background:var(--accent)}
+.log{margin:0 14px 14px;padding:10px 12px;border-radius:10px;background:var(--ed-bg);color:var(--ed-fg);font:11.5px/1.7 var(--font-mono);min-height:128px;overflow-x:auto;white-space:pre}
+.log div{animation:in .3s both}
+.race{padding:16px;display:grid;gap:18px}
+.rr .top{display:flex;justify-content:space-between;gap:8px;font:12px var(--font-mono);color:var(--muted);margin-bottom:6px}
+.rr .top b{color:var(--fg);font-weight:500}
+.rr .trk{height:18px;border-radius:5px;background:var(--surface-2);overflow:hidden}
+.rr .f{height:100%;width:0}
+.f.a{background:var(--muted);opacity:.6}
+.f.b{background:var(--accent)}
+.rnote{font-size:12px;color:var(--muted)}
+.pl{fill:none;stroke:var(--muted);stroke-width:1.5;stroke-dasharray:4 4}
+.rl{fill:none;stroke:var(--fg);stroke-width:2.2}
+.pj{fill:none;stroke:var(--accent);stroke-width:2.4;stroke-dasharray:6 4;transition:opacity .8s}
+.fx{transition:opacity .8s}
+.legend{display:flex;gap:16px;flex-wrap:wrap;font:11px var(--font-mono);color:var(--muted);padding:0 14px 12px}
+.legend span::before{content:"";display:inline-block;width:14px;height:0;border-top:2px solid var(--fg);margin-right:6px;vertical-align:middle}
+.legend .lp::before{border-top:2px dashed var(--muted)}
+.legend .lj::before{border-top:2px dashed var(--accent)}
+@keyframes in{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:none}}
+@keyframes grow{from{transform:scaleY(0)}to{transform:scaleY(1)}}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 var(--accent-soft)}50%{box-shadow:0 0 0 6px var(--accent-soft)}}
+
+/* proyectos */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px}
+.card{display:flex;flex-direction:column;gap:12px;text-decoration:none;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:22px;min-width:0;transition:border-color .2s,transform .2s}
+.card:hover{border-color:var(--accent);transform:translateY(-2px)}
+.card.feature{grid-column:1/-1;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:28px;padding:28px;background:linear-gradient(135deg,var(--surface),var(--surface-2))}
+.chip{align-self:flex-start;display:inline-block;font-family:var(--font-mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;padding:4px 9px;border-radius:99px;border:1px solid var(--line);color:var(--muted)}
+.chip.real{color:var(--accent);border-color:var(--accent);background:var(--accent-soft)}
+.card h3{font-size:22px}
+.card.feature h3{font-size:clamp(26px,3.4vw,34px)}
+.card p{color:var(--muted);font-size:15px}
+.card .more{margin-top:auto;font-size:14px;font-weight:600;color:var(--accent)}
+.kpis{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;align-self:center}
+.kpi{border:1px solid var(--line);border-radius:12px;padding:14px;background:var(--bg)}
+.kpi b{display:block;font-family:var(--font-display);font-size:clamp(22px,3vw,30px);color:var(--accent);font-variant-numeric:tabular-nums}
+.kpi span{font-size:12px;color:var(--muted);line-height:1.35;display:block;margin-top:4px}
+
+/* trayectoria */
+.tl{list-style:none;margin:0;padding:0;border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.tl li{display:grid;grid-template-columns:170px minmax(0,1fr);gap:20px;padding:18px 22px;border-bottom:1px solid var(--line);background:var(--surface)}
+.tl li:last-child{border-bottom:0}
+.tl .when{font-family:var(--font-mono);font-size:12px;color:var(--accent);padding-top:3px}
+.tl h3{font-size:18px;font-family:var(--font-display)}
+.tl .org{font-size:14px;color:var(--muted);margin:2px 0 6px}
+.tl p{font-size:14px;color:var(--muted)}
+.tl-note{margin-top:14px;font-size:14px;color:var(--muted)}
+.edu{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:16px}
+
+.tech{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+.tech-card{border:1px solid var(--line);border-radius:14px;padding:22px;background:var(--surface);min-width:0}
+.tech-card h3{font-size:18px;margin-bottom:6px}
+.tech-card .how{font-size:14px;color:var(--muted);margin-bottom:14px}
+.tags{display:flex;flex-wrap:wrap;gap:8px}
+.tag{font-family:var(--font-mono);font-size:12px;padding:5px 10px;border-radius:6px;background:var(--surface-2);border:1px solid var(--line)}
+.tag small{color:var(--muted);font-size:11px}
+.lvl-note{font-size:13px;color:var(--muted);margin-top:16px}
+
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:0;counter-reset:s;border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.steps li{counter-increment:s;padding:22px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);margin:-1px -1px 0 0;min-width:0;background:var(--surface)}
+.steps li::before{content:counter(s);font-family:var(--font-mono);font-size:12px;color:var(--accent);display:block;margin-bottom:12px}
+.steps h3{font-size:17px;margin-bottom:8px}
+.steps p{font-size:14px;color:var(--muted)}
+
+.impact{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px}
+.panel{border:1px solid var(--line);border-radius:14px;padding:24px;background:var(--surface);min-width:0}
+.panel h3{font-size:18px;margin-bottom:4px}
+.big{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:20px}
+.big div b{display:block;font-family:var(--font-display);font-size:clamp(28px,4vw,40px);color:var(--accent);font-variant-numeric:tabular-nums;line-height:1}
+.big div span{font-size:13px;color:var(--muted);display:block;margin-top:6px}
+.sim label{display:block;font-size:14px;margin:16px 0 8px}
+.sim input[type=range]{width:100%;accent-color:var(--accent)}
+.sim output{font-family:var(--font-mono);color:var(--accent)}
+.sim .res{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:18px}
+.sim .res b{font-family:var(--font-display);font-size:26px;display:block;font-variant-numeric:tabular-nums}
+.sim .res span{font-size:13px;color:var(--muted)}
+.slot{border:1px dashed var(--line);border-radius:14px;padding:18px 22px;margin-top:16px;color:var(--muted);font-size:14px}
+
+.contact{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,5vw,64px);align-items:start}
+.contact h2{font-size:clamp(30px,4.5vw,48px)}
+.contact-box{border:1px solid var(--line);border-radius:14px;padding:24px;background:var(--surface);display:grid;gap:14px}
+.contact-box .row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.mail{font-family:var(--font-mono);font-size:14px;user-select:all;word-break:break-all}
+footer{border-top:1px solid var(--line);padding-block:28px 40px;font-size:13px;color:var(--muted);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+
+/* detalle */
+#detail{padding-block:clamp(32px,5vw,64px)}
+.back{display:inline-flex;gap:8px;align-items:center;font-size:14px;color:var(--muted);text-decoration:none;margin-bottom:28px;background:none;border:0;font-family:inherit;cursor:pointer;padding:6px 0}
+.back:hover{color:var(--accent)}
+.d-head{max-width:820px;display:grid;gap:14px;margin-bottom:36px}
+.d-head h1{font-size:clamp(32px,5vw,54px)}
+.d-head p{color:var(--muted);font-size:18px}
+.d-head .btn{align-self:flex-start}
+.d-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px}
+.d-sec{border:1px solid var(--line);border-radius:14px;padding:22px;background:var(--surface);min-width:0}
+.d-sec.wide{grid-column:1/-1}
+.d-sec h2{font-size:13px;font-family:var(--font-mono);font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:10px}
+.d-sec p,.d-sec li{color:var(--muted);font-size:15px}
+.d-sec ul{margin:0;padding-left:18px;display:grid;gap:6px}
+.d-sec .pending,.pend{color:var(--warn);font-family:var(--font-mono);font-size:13px}
+.d-nav{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-top:28px}
+
+
+/* Estilo técnico y formal: tipografía de desarrollo, esquinas rectas, cuadrícula de ingeniería */
+body{font-size:15.5px}
+.eyebrow::before{content:"// ";opacity:.7}
+.brand{font-size:14px;letter-spacing:-.01em}
+.nav-links a{font-family:var(--font-mono);font-size:12px}
+.prog{position:absolute;left:0;bottom:-1px;height:2px;width:0;background:var(--accent)}
+.hero{position:relative;isolation:isolate}
+.hero::before{content:"";position:absolute;inset:0 -16px;z-index:-1;pointer-events:none;
+  background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);
+  background-size:44px 44px;opacity:.5;
+  -webkit-mask-image:linear-gradient(to bottom,#000,transparent 88%);mask-image:linear-gradient(to bottom,#000,transparent 88%)}
+.hero h1{font-size:clamp(28px,4.4vw,50px);line-height:1.15;letter-spacing:-.03em}
+.hero .lead{font-size:clamp(16px,1.7vw,18px)}
+.sec-head h2{font-size:clamp(22px,3vw,32px);line-height:1.2}
+.sec-head h2::after{content:"";display:block;width:44px;height:3px;background:var(--accent);margin-top:14px}
+.card h3{font-size:17px;line-height:1.3}
+.card.feature h3{font-size:clamp(20px,2.4vw,26px)}
+.slide-text h3{font-size:clamp(18px,2.2vw,22px);line-height:1.3}
+.tl h3{font-size:16px}.steps h3{font-size:15px}.tech-card h3{font-size:15px}.panel h3{font-size:15px}
+.d-head h1{font-size:clamp(24px,3.6vw,38px);line-height:1.2}
+.contact h2{font-size:clamp(24px,3.4vw,36px);line-height:1.2}
+.kpi b{font-size:clamp(18px,2.4vw,24px)}
+.big div b{font-size:clamp(22px,2.8vw,32px)}
+.kp b{font-size:18px}.sim .res b{font-size:22px}
+.card,.panel,.d-sec,.tech-card,.demo,.timecard,.contact-box,.win,.out,.facts,.tl,.steps,.slot,.kpi,.kp div,.pv,.hub button,.log{border-radius:4px}
+.btn,.icon-btn,.demo-tabs button{border-radius:3px}
+.chip,.tag,.chips button{border-radius:3px}
+.track,.fill,.rr .trk,.rr .f{border-radius:2px}
+.btn{font-family:var(--font-mono);font-size:13px;font-weight:500;letter-spacing:.01em}
+.chip{font-size:10.5px}
+.tl .org{font-family:var(--font-mono);font-size:12.5px}
+footer{font-family:var(--font-mono);font-size:12px}
+@supports (animation-timeline: view()){
+  .card,.tech-card,.tl li,.steps li,.panel,.d-sec{animation:rise linear backwards;animation-timeline:view();animation-range:entry 0% entry 40%}
+  @keyframes rise{from{opacity:.3;transform:translateY(18px)}to{opacity:1;transform:none}}
+}
+@media (max-width:900px){
+  .hero,.about,.impact,.contact,.d-grid,.card.feature,.slide.on{grid-template-columns:minmax(0,1fr)}
+  .fact{grid-template-columns:1fr;gap:2px}
+  .tl li{grid-template-columns:1fr;gap:6px}
+  .nav-links{display:none}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<div class="nav"><div class="wrap">
+  <a class="brand" href="#inicio" data-home>Eliezer Palpan León</a>
+  <nav class="nav-links" aria-label="Secciones">
+    <a href="#sobre-mi" data-home>Sobre mí</a><a href="#demos" data-home>Integraciones</a><a href="#proyectos" data-home>Proyectos</a><a href="#trayectoria" data-home>Trayectoria</a><a href="#tecnologias" data-home>Tecnologías</a><a href="#impacto" data-home>Impacto</a><a href="#contacto" data-home>Contacto</a>
+  </nav>
+  <button class="icon-btn" id="themeBtn" type="button" aria-label="Cambiar tema claro u oscuro">Tema</button>
+</div><div class="prog" id="prog"></div></div>
+
+<main id="home" class="wrap">
+  <header class="hero" id="inicio">
+    <div>
+      <p class="eyebrow">Datos · Tecnología · Negocio</p>
+      <h1>Datos y procesos complejos, convertidos en soluciones que funcionan.</h1>
+      <p class="lead">Combino <strong>analítica, Python y SQL, Power BI</strong> y automatización con <strong>RPA, APIs, Power Automate y Power Apps</strong> para acelerar operaciones y dar a las áreas comerciales la información que necesitan para decidir. Trabajo en el entorno de telecomunicaciones, con foco en campañas, bases de clientes y productividad.</p>
+      <div class="cta-row">
+        <a class="btn primary" href="#proyectos" data-home>Explorar proyectos</a>
+        <a class="btn" href="#demos" data-home>Ver integraciones</a>
+        <a class="btn" href="#contacto" data-home>Contactar</a>
+        <a class="btn" href="https://www.linkedin.com/in/eliezer-palpan-leon-a01479212/" target="_blank" rel="noopener">LinkedIn ↗</a>
+      </div>
+      <p class="hero-meta">Lima, Perú · Español nativo · Inglés intermedio</p>
+    </div>
+    <aside class="timecard" aria-label="Comparación de tiempos de ejecución">
+      <h3>Exportación de bases de gran volumen</h3>
+      <p class="sub">Tiempo de ejecución por corrida, a escala</p>
+      <div class="bars">
+        <div class="bar-row"><div class="lbl"><span>Proceso anterior</span><b>60 min</b></div><div class="track"><div class="fill before"></div></div></div>
+        <div class="bar-row"><div class="lbl"><span>Con automatización</span><b>4 min</b></div><div class="track"><div class="fill after"></div></div></div>
+      </div>
+      <div class="tc-foot"><span><b>−56 min</b> por ejecución</span><span><b>−93,3 %</b> de tiempo</span><span><b>≈15×</b> más rápido</span></div>
+      <p class="disclaimer">Compara los tiempos de ejecución informados. No es un ahorro monetario.</p>
+    </aside>
+  </header>
+
+  <section id="sobre-mi">
+    <div class="sec-head"><p class="eyebrow">Sobre mí</p><h2>Entre la necesidad del negocio y la implementación técnica</h2></div>
+    <div class="about">
+      <div class="col">
+        <p>Mi base es la economía y la gestión de negocios, y mi trabajo reciente está en <strong>datos, campañas comerciales y automatización</strong> dentro del sector telecomunicaciones.</p>
+        <p>Mi perfil es multidisciplinario: analizo información, programo para procesarla, integro herramientas y automatizo las tareas que se repiten. Me interesa que cada solución sea <strong>medible, escalable y simple de mantener</strong>, y que responda a un objetivo comercial u operativo concreto.</p>
+        <p>Parto de entender el problema del área, valido los datos y recién después elijo la herramienta.</p>
+      </div>
+      <dl class="facts">
+        <div class="fact"><dt>Enfoque</dt><dd>Analytics, BI y automatización de procesos</dd></div>
+        <div class="fact"><dt>Más reciente</dt><dd>Data Science · Bright – Integratel (abr 2026 – actualidad)</dd></div>
+        <div class="fact"><dt>Formación</dt><dd>Estudiante de Economía (UPN, 2025) y de Administración de Empresas (UPC, 2023)</dd></div>
+        <div class="fact"><dt>Certificados</dt><dd>Google Ads y Google Analytics (Google, 2023)</dd></div>
+        <div class="fact"><dt>Idiomas</dt><dd>Español nativo · Inglés intermedio</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section id="demos">
+    <div class="sec-head"><p class="eyebrow">Herramientas conectadas</p><h2>Integraciones</h2><p>Recreaciones animadas con datos ficticios: Python con pandas, un panel al estilo Power BI, un Hub BI en Power Apps, un flujo de Power Automate, la exportación de 60 a 4 minutos y una proyección. Ninguna muestra información ni sistemas de una empresa.</p></div>
+    <div class="demo" id="demo">
+      <div class="demo-tabs" role="tablist" id="dtabs" aria-label="Demos"></div>
+      <div class="slides" id="slides"></div>
+      <div class="demo-foot">
+        <span>Datos ficticios · recreaciones ilustrativas</span>
+        <div class="demo-ctl"><button class="icon-btn" id="prevBtn" type="button" aria-label="Demo anterior">‹</button><button class="icon-btn" id="nextBtn" type="button" aria-label="Demo siguiente">›</button><button class="icon-btn" id="playBtn" type="button">Pausar</button></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="proyectos">
+    <div class="sec-head"><p class="eyebrow">Proyectos destacados</p><h2>Casos y líneas de trabajo</h2></div>
+    <div class="grid" id="grid"></div>
+  </section>
+
+  <section id="trayectoria">
+    <div class="sec-head"><p class="eyebrow">Trayectoria</p><h2>De la gestión comercial a los datos y la automatización</h2></div>
+    <ol class="tl">
+      <li><div class="when">ABR 2026 – ACTUALIDAD</div><div><h3>Data Science</h3><p class="org">Bright – Integratel</p><p>Mismo puesto y funciones similares a mi etapa en VML: análisis y gestión de big data para campañas multicanal, automatización de procesos con Python, SQL, APIs y RPA, integraciones con Power Automate, reportes en Power BI y soluciones en Power Apps como el Hub BI.</p></div></li>
+      <li><div class="when">JUL 2025 – MAR 2026</div><div><h3>Data Science</h3><p class="org">VML – Integratel</p><p>Análisis y gestión de big data para campañas multicanal. Planificación y envío de bases para campañas digitales. Diseño y automatización de procesos con Python, SQL, APIs y RPA. Análisis de la base de clientes para segmentación y conversión.</p></div></li>
+      <li><div class="when">ABR – JUN 2025</div><div><h3>Analista de Marketing</h3><p class="org">VML – Integratel</p><p>Control operativo y seguimiento de KPIs de socios comerciales. Evaluación de fuentes de leads y proveedores. Estrategias para mejorar la conversión.</p></div></li>
+      <li><div class="when">NOV 2024 – ABR 2025</div><div><h3>Analista Comercial Senior</h3><p class="org">Teleavance</p><p>Lideré el área de BI: planificación de ventas y operaciones, forecasting financiero, balanced scorecard y reportería analítica.</p></div></li>
+      <li><div class="when">AGO – NOV 2024</div><div><h3>Analista BI Jr</h3><p class="org">Teleavance</p><p>Análisis de precios, promociones y rentabilidad por producto. Reportes e informes en Power BI en línea.</p></div></li>
+      <li><div class="when">ENE – AGO 2024</div><div><h3>Auxiliar en administración de datos</h3><p class="org">EAFC Maquisistema</p><p>Análisis de proyecciones del equipo, informes mensuales y presentaciones a gerencia.</p></div></li>
+      <li><div class="when">OCT 2023 – ENE 2024</div><div><h3>Analista de Gerencia</h3><p class="org">Telefónica Chile</p><p>Datos para decisiones estratégicas. Informes y presentaciones visuales para la alta dirección.</p></div></li>
+      <li><div class="when">MAY – SEP 2023</div><div><h3>Analista de Experiencia de Usuario</h3><p class="org">Telefónica Chile</p><p>Investigación y evaluación de experiencia de usuario, con pruebas de usabilidad y análisis de datos.</p></div></li>
+    </ol>
+    <p class="tl-note">Antes de 2023: asistente ejecutivo en Telefónica Chile, soporte legal y comercial en SKY Airline Perú, y coordinación de estrategia de marketing en Vinifan.</p>
+  </section>
+
+  <section id="tecnologias">
+    <div class="sec-head"><p class="eyebrow">Tecnologías y herramientas</p><h2>Qué uso y para qué</h2><p>Sin porcentajes de dominio. Donde aparece un nivel, es el que declaro en mi CV.</p></div>
+    <div class="tech">
+      <div class="tech-card"><h3>Análisis y programación</h3><p class="how">Limpiar, explorar y procesar datos grandes con reglas de negocio claras.</p><div class="tags"><span class="tag">Python <small>intermedio</small></span><span class="tag">pandas</span><span class="tag">NumPy</span><span class="tag">Data cleaning</span><span class="tag">EDA</span><span class="tag">Análisis estadístico</span><span class="tag">SQL <small>intermedio</small></span><span class="tag">Stata <small>intermedio</small></span></div></div>
+      <div class="tech-card"><h3>Business Intelligence</h3><p class="how">Indicadores, monitoreo de objetivos y detección de desviaciones.</p><div class="tags"><span class="tag">Power BI <small>avanzado</small></span><span class="tag">DAX</span><span class="tag">Excel <small>avanzado</small></span><span class="tag">Modelado de datos</span><span class="tag">Balanced Scorecard</span></div></div>
+      <div class="tech-card"><h3>Automatización e integración</h3><p class="how">Conectar sistemas y reemplazar tareas manuales por ejecuciones automatizadas.</p><div class="tags"><span class="tag">Power Automate</span><span class="tag">RPA</span><span class="tag">APIs</span><span class="tag">Integraciones</span><span class="tag">Power Apps</span><span class="tag">CRMs</span></div></div>
+      <div class="tech-card"><h3>Planificación y gestión</h3><p class="how">Ordenar el trabajo y conectarlo con objetivos de negocio.</p><div class="tags"><span class="tag">Planificación estratégica</span><span class="tag">Planificación de proyectos</span><span class="tag">Planificación y análisis financiero</span><span class="tag">Gantt</span><span class="tag">Asana</span><span class="tag">Basecamp</span><span class="tag">Value Stream Mapping</span><span class="tag">ISO 9001</span></div></div>
+      <div class="tech-card"><h3>Sistemas de negocio</h3><p class="how">Plataformas comerciales y de marketing donde vive la información.</p><div class="tags"><span class="tag">Salesforce <small>intermedio</small></span><span class="tag">SAP Business One <small>básico</small></span><span class="tag">Google Analytics</span><span class="tag">Google Ads</span></div></div>
+      <div class="tech-card"><h3>Desarrollo e IA</h3><p class="how">Entorno de desarrollo y uso de IA aplicada a procesos del negocio.</p><div class="tags"><span class="tag">Visual Studio Code</span><span class="tag">IA aplicada a procesos</span></div></div>
+    </div>
+  </section>
+
+  <section id="enfoque">
+    <div class="sec-head"><p class="eyebrow">Enfoque de trabajo</p><h2>De la pregunta del negocio al resultado medido</h2></div>
+    <ol class="steps">
+      <li><h3>Comprender el problema</h3><p>Qué necesita el área, qué decisión apoya y cómo se mide el éxito.</p></li>
+      <li><h3>Explorar y validar datos</h3><p>Fuentes, calidad, reglas y casos límite antes de construir nada.</p></li>
+      <li><h3>Diseñar la solución</h3><p>La opción analítica o técnica más simple que resuelve el problema.</p></li>
+      <li><h3>Desarrollar y automatizar</h3><p>Código y flujos reutilizables, con trazabilidad de cada paso.</p></li>
+      <li><h3>Validar resultados</h3><p>Contrastar la salida con el proceso anterior y con las reglas acordadas.</p></li>
+      <li><h3>Medir y optimizar</h3><p>Comparar tiempos e indicadores y ajustar donde aún hay fricción.</p></li>
+    </ol>
+  </section>
+
+  <section id="impacto">
+    <div class="sec-head"><p class="eyebrow">Impacto en números</p><h2>Un resultado verificable, explicado con cuidado</h2><p>Solo muestro cifras que tengo respaldadas. El ahorro acumulado depende de cuántas veces se ejecuta el proceso.</p></div>
+    <div class="impact">
+      <div class="panel">
+        <h3>Exportación automatizada de bases</h3>
+        <p class="muted" style="font-size:14px">60 min → 4 min por ejecución (tiempos informados)</p>
+        <div class="big">
+          <div><b>56</b><span>minutos ahorrados por ejecución</span></div>
+          <div><b id="pct">93,3 %</b><span>menos tiempo de ejecución</span></div>
+          <div><b id="x">15×</b><span>más velocidad, aproximada</span></div>
+        </div>
+        <p class="disclaimer">No representa ahorro anual ni resultado financiero.</p>
+      </div>
+      <div class="panel sim">
+        <h3>Ahorro acumulado según frecuencia</h3>
+        <p class="muted" style="font-size:14px">Simulador ilustrativo. La frecuencia real del proceso no está publicada.</p>
+        <label for="freq">Ejecuciones por semana: <output id="freqOut" for="freq">5</output></label>
+        <input id="freq" type="range" min="1" max="40" value="5">
+        <div class="res"><div><b id="minWk">280 min</b><span>menos de espera por semana</span></div><div><b id="hrWk">4,7 h</b><span>equivalente por semana</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacto">
+    <div class="contact">
+      <div><p class="eyebrow">Contacto</p><h2 style="margin-top:12px">Hablemos de datos, procesos y resultados.</h2></div>
+      <div class="contact-box">
+        <p class="muted">Si tienes un proceso lento, una base difícil de explotar o indicadores que no llegan a tiempo, escríbeme.</p>
+        <div class="row"><a class="btn primary" href="https://www.linkedin.com/in/eliezer-palpan-leon-a01479212/" target="_blank" rel="noopener">Escribir por LinkedIn ↗</a></div>
+        <div id="mailRow" hidden><p class="muted" style="font-size:13px">Correo</p><div class="row"><span class="mail" id="mailTxt"></span><button class="icon-btn" id="copyBtn" type="button">Copiar</button></div></div>
+      </div>
+    </div>
+  </section>
+  <footer><span>© 2026 Eliezer Palpan León</span><span>Demos y cifras sin datos internos de empresas.</span></footer>
+</main>
+
+<main id="detail" class="wrap" hidden></main>
+
+<script>
+(function(){
+  var CONTACT_EMAIL = "eliezerpalpan13@gmail.com";
+  var RM = false; try{ RM = matchMedia("(prefers-reduced-motion: reduce)").matches; }catch(e){}
+
+  /* ---------- utilidades de animación ---------- */
+  var T = [], raf = 0;
+  function later(fn, ms){ var id = setTimeout(fn, ms); T.push(id); return id; }
+  function every(fn, ms){ var id = setInterval(fn, ms); T.push(id); return id; }
+  function stopAll(){ T.forEach(function(id){ clearTimeout(id); clearInterval(id); }); T = []; if(raf){ cancelAnimationFrame(raf); raf = 0; } }
+  function fmt(n){ return String(n).replace(/\B(?=(\d{3})+(?!\d))/g, "."); }
+  function dec(n, d){ return n.toFixed(d).replace(".", ","); }
+
+  /* ---------- demo 0: Python + pandas ---------- */
+  var PY = {
+    lines: [
+      '<span class="k">import</span> pandas <span class="k">as</span> pd',
+      '<span class="c"># datos ficticios con fines demostrativos</span>',
+      'df = pd.<span class="f">read_csv</span>(<span class="s">"leads_demo.csv"</span>)',
+      'df = df.<span class="f">drop_duplicates</span>(<span class="s">"id_lead"</span>).<span class="f">dropna</span>(subset=[<span class="s">"canal"</span>])',
+      'df[<span class="s">"contactado"</span>] = df[<span class="s">"estado"</span>].<span class="f">eq</span>(<span class="s">"contactado"</span>)',
+      'res = (df.<span class="f">groupby</span>(<span class="s">"canal"</span>)',
+      '       .<span class="f">agg</span>(leads=(<span class="s">"id_lead"</span>, <span class="s">"count"</span>),',
+      '            contactabilidad=(<span class="s">"contactado"</span>, <span class="s">"mean"</span>))',
+      '       .<span class="f">sort_values</span>(<span class="s">"leads"</span>, ascending=<span class="k">False</span>))',
+      '<span class="f">print</span>(res)'
+    ],
+    rows: [["Digital",1240,62],["Telefónico",980,48],["Presencial",610,71],["Alianzas",350,55]],
+    rowHtml: function(r){ return '<tr><td>'+r[0]+'</td><td>'+fmt(r[1])+'</td><td><span class="mb"><i style="width:'+r[2]+'%"></i></span>0,'+r[2]+'</td></tr>'; },
+    build: function(el){
+      el.innerHTML = '<div class="win ed"><div class="win-bar"><i></i><i></i><i></i><span>limpieza_campana.py · Visual Studio Code</span></div><pre class="code" aria-label="Código Python de ejemplo"></pre></div>' +
+        '<div class="out"><table class="tbl"><thead><tr><th>canal</th><th>leads</th><th>contactabilidad</th></tr></thead><tbody></tbody></table></div>';
+      this.pre = el.querySelector(".code"); this.body = el.querySelector("tbody");
+      this.final();
+    },
+    final: function(){
+      this.pre.innerHTML = this.lines.map(function(l){ return '<span class="ln" style="animation:none">'+l+'</span>'; }).join("");
+      this.body.innerHTML = this.rows.map(this.rowHtml).join("");
+    },
+    play: function(){
+      var me = this, i = 0, j = 0;
+      me.pre.innerHTML = ""; me.body.innerHTML = "";
+      every(function(){
+        if(i < me.lines.length){ var s = document.createElement("span"); s.className = "ln"; s.innerHTML = me.lines[i]; me.pre.appendChild(s); i++; }
+        else if(j < me.rows.length){ me.body.insertAdjacentHTML("beforeend", me.rowHtml(me.rows[j])); j++; }
+      }, 420);
+    }
+  };
+
+  /* ---------- demo 1: panel tipo Power BI ---------- */
+  var BI = {
+    names: ["Todos","Digital","Telefónico","Presencial","Alianzas"],
+    leads: {"Digital":[320,340,310,360,380,400],"Telefónico":[260,250,270,240,255,265],"Presencial":[110,120,100,130,125,140],"Alianzas":[60,70,80,75,90,95]},
+    ventas: {"Digital":[38,41,37,46,49,53],"Telefónico":[26,24,29,25,27,30],"Presencial":[14,17,12,19,18,22],"Alianzas":[5,6,8,7,10,11]},
+    series: function(map, name){
+      var out = [0,0,0,0,0,0], k;
+      for(k in map){ if(name === "Todos" || name === k){ map[k].forEach(function(v, i){ out[i] += v; }); } }
+      return out;
+    },
+    build: function(el){
+      var me = this;
+      el.innerHTML = '<div class="win"><div class="win-bar"><i></i><i></i><i></i><span>Panel de campañas · demo</span></div><div class="bi"><div class="chips" role="group" aria-label="Filtro por canal"></div><div class="kp"></div><svg class="chart" viewBox="0 0 360 170" role="img" aria-label="Ventas por semana con datos ficticios"></svg></div></div>';
+      me.chips = el.querySelector(".chips"); me.kp = el.querySelector(".kp"); me.svg = el.querySelector(".chart");
+      me.names.forEach(function(n, i){
+        var b = document.createElement("button"); b.type = "button"; b.textContent = n;
+        b.onclick = function(){ me.sel(i, false); };
+        me.chips.appendChild(b);
+      });
+      me.cur = 0; me.sel(0, true);
+    },
+    sel: function(i, still){
+      var me = this, name = me.names[i], L = me.series(me.leads, name), V = me.series(me.ventas, name);
+      me.cur = i;
+      Array.prototype.forEach.call(me.chips.children, function(b, k){ b.setAttribute("aria-pressed", k === i ? "true" : "false"); });
+      var tl = L.reduce(function(a, b){ return a + b; }, 0), tv = V.reduce(function(a, b){ return a + b; }, 0);
+      me.kp.innerHTML = '<div><b>'+fmt(tl)+'</b><span>Leads</span></div><div><b>'+fmt(tv)+'</b><span>Ventas</span></div><div><b>'+dec(tv/tl*100,1)+' %</b><span>Conversión</span></div>';
+      var max = Math.max.apply(null, V) * 1.2, H = 110, base = 140, s = '<text class="tx" x="20" y="12">Ventas por semana · '+name+'</text>';
+      [0, .5, 1].forEach(function(g){ var y = base - H*g; s += '<line class="gl" x1="20" x2="350" y1="'+y+'" y2="'+y+'"/>'; });
+      V.forEach(function(v, k){
+        var h = Math.round(v/max*H), x = 34 + k*54;
+        s += '<rect class="bar" x="'+x+'" y="'+(base-h)+'" width="30" height="'+h+'" rx="3"'+(still ? ' style="animation:none"' : '')+'/>' +
+             '<text class="tv" x="'+(x+15)+'" y="'+(base-h-5)+'" text-anchor="middle">'+v+'</text>' +
+             '<text class="tx" x="'+(x+15)+'" y="158" text-anchor="middle">S'+(k+1)+'</text>';
+      });
+      me.svg.innerHTML = s;
+    },
+    final: function(){ this.sel(0, true); },
+    play: function(){ var me = this; me.sel(0, false); every(function(){ me.sel((me.cur + 1) % me.names.length, false); }, 2300); }
+  };
+
+  /* ---------- demo 2: Hub BI en Power Apps ---------- */
+  var HUB = {
+    tiles: [["Histórico",[40,55,48,62,58,70,66,80]],["Composición del mes",[30,45,60,52,66,50,72,64]],["Comparativo mensual",[50,42,58,66,60,74,68,76]],["Gestión de indicadores",[36,48,44,60,70,64,78,82]],["Avance diario",[20,32,46,58,66,74,80,90]],["Calidad de datos",[70,72,68,75,80,78,84,86]]],
+    build: function(el){
+      var me = this;
+      el.innerHTML = '<div class="win"><div class="win-bar"><i></i><i></i><i></i><span>Hub BI · demo estilo Power Apps</span></div><div class="hub"></div><div class="pv"><h4></h4><div class="pvbars"></div></div></div>';
+      me.hub = el.querySelector(".hub"); me.h4 = el.querySelector(".pv h4"); me.pb = el.querySelector(".pvbars");
+      me.tiles.forEach(function(t, i){
+        var b = document.createElement("button"); b.type = "button";
+        b.innerHTML = '<svg class="ic" width="26" height="26" viewBox="0 0 26 26" aria-hidden="true"><rect x="3" y="13" width="6" height="10" rx="1.5" opacity=".5"/><rect x="10" y="8" width="6" height="15" rx="1.5" opacity=".75"/><rect x="17" y="3" width="6" height="20" rx="1.5"/></svg><span>'+t[0]+'</span>';
+        b.onclick = function(){ me.sel(i); };
+        me.hub.appendChild(b);
+      });
+      for(var k = 0; k < 8; k++){ me.pb.appendChild(document.createElement("i")); }
+      me.cur = 0; me.sel(0);
+    },
+    sel: function(i){
+      var me = this, t = me.tiles[i]; me.cur = i;
+      Array.prototype.forEach.call(me.hub.children, function(b, k){ b.className = k === i ? "on" : ""; });
+      me.h4.textContent = "Reporte · " + t[0];
+      Array.prototype.forEach.call(me.pb.children, function(b, k){ b.style.height = t[1][k] + "%"; });
+    },
+    final: function(){ this.sel(0); },
+    play: function(){ var me = this; me.sel(0); every(function(){ me.sel((me.cur + 1) % me.tiles.length); }, 1800); }
+  };
+
+  /* ---------- demo 3: flujo Power Automate / RPA ---------- */
+  var FLOW = {
+    nodes: ["Archivo nuevo en la carpeta de entrada","Lectura y validación de la plantilla","Reglas de negocio aplicadas","Carga al CRM mediante RPA o API","Evidencia y registro del proceso"],
+    logs: ["[08:00:01] Archivo recibido: plantilla_demo.xlsx","[08:00:03] 500 filas leídas · 487 válidas · 13 observadas","[08:00:04] Segmentación y distribución aplicadas","[08:00:19] Carga completada: 487 registros","[08:00:20] Evidencia y log guardados en la carpeta de salida"],
+    build: function(el){
+      var me = this;
+      el.innerHTML = '<div class="win"><div class="win-bar"><i></i><i></i><i></i><span>Flujo automatizado · demo</span></div><div class="flow"></div><div class="log" role="log" aria-label="Registro del flujo de ejemplo"></div></div>';
+      me.fl = el.querySelector(".flow"); me.lg = el.querySelector(".log");
+      me.nodes.forEach(function(n){ var d = document.createElement("div"); d.className = "nd"; d.innerHTML = '<span class="dot"></span><span class="t">'+n+'</span>'; me.fl.appendChild(d); });
+      me.final();
+    },
+    set: function(k, st){ this.fl.children[k].className = "nd" + (st ? " " + st : ""); },
+    addLog: function(k, still){ var d = document.createElement("div"); d.textContent = this.logs[k]; if(still){ d.style.animation = "none"; } this.lg.appendChild(d); },
+    final: function(){ var me = this; me.lg.innerHTML = ""; me.nodes.forEach(function(n, k){ me.set(k, "ok"); me.addLog(k, true); }); },
+    play: function(){
+      var me = this, k = 0;
+      me.lg.innerHTML = ""; me.nodes.forEach(function(n, i){ me.set(i, ""); });
+      function step(){
+        if(k > 0){ me.set(k - 1, "ok"); }
+        if(k < me.nodes.length){ me.set(k, "run"); me.addLog(k, false); k++; later(step, 1500); }
+      }
+      step();
+    }
+  };
+
+  /* ---------- demo 4: carrera 60 vs 4 minutos ---------- */
+  var RACE = {
+    build: function(el){
+      el.innerHTML = '<div class="win"><div class="win-bar"><i></i><i></i><i></i><span>Exportación de base · simulación a escala</span></div><div class="race">' +
+        '<div class="rr"><div class="top"><span>Proceso anterior</span><b class="ta"></b></div><div class="trk"><div class="f a"></div></div></div>' +
+        '<div class="rr"><div class="top"><span>Con automatización</span><b class="tb"></b></div><div class="trk"><div class="f b"></div></div></div>' +
+        '<p class="rnote">Un segundo equivale a 10 minutos. Tiempos informados: 60 y 4 minutos por ejecución.</p></div></div>';
+      this.fa = el.querySelector(".f.a"); this.fb = el.querySelector(".f.b"); this.ta = el.querySelector(".ta"); this.tb = el.querySelector(".tb");
+      this.final();
+    },
+    draw: function(sim){
+      var a = Math.min(sim, 60), b = Math.min(sim, 4);
+      this.fa.style.width = (a/60*100) + "%"; this.fb.style.width = (b/4*100) + "%";
+      this.ta.textContent = a >= 60 ? "60 min · listo" : Math.floor(a) + " min…";
+      this.tb.textContent = b >= 4 ? "4 min · listo" : dec(b, 1) + " min…";
+    },
+    final: function(){ this.draw(60); },
+    play: function(){
+      var me = this, t0 = performance.now();
+      function f(now){ var s = (now - t0)/1000; me.draw(Math.min(s*10, 60)); if(s < 6.2){ raf = requestAnimationFrame(f); } }
+      raf = requestAnimationFrame(f);
+    }
+  };
+
+  /* ---------- demo 5: plan, real y proyección ---------- */
+  var FC = {
+    plan: [0,8,18,30,44,58,72,85,96,105,112,117,120],
+    real: [0,7,15,26,38,50,62],
+    X: function(i){ return 40 + i*25; },
+    Y: function(v){ return 150 - v*0.96; },
+    build: function(el){
+      var me = this, P = me.plan, R = me.real, n = R.length - 1, ratio = R[n]/P[n], i, s = '';
+      [0,40,80,120].forEach(function(v){ s += '<line class="gl" x1="40" x2="340" y1="'+me.Y(v)+'" y2="'+me.Y(v)+'"/><text class="tx" x="34" y="'+(me.Y(v)+3)+'" text-anchor="end">'+v+'</text>'; });
+      for(i = 0; i <= 12; i += 2){ s += '<text class="tx" x="'+me.X(i)+'" y="168" text-anchor="middle">'+(8+i)+' h</text>'; }
+      var pp = P.map(function(v, k){ return me.X(k)+','+me.Y(v); }).join(" ");
+      var rp = R.map(function(v, k){ return me.X(k)+','+me.Y(v); }).join(" ");
+      var pj = []; for(i = n; i <= 12; i++){ pj.push(me.X(i)+','+me.Y(R[n] + (P[i]-P[n])*ratio)); }
+      var end = Math.round(R[n] + (P[12]-P[n])*ratio);
+      s += '<polyline class="pl" points="'+pp+'"/>';
+      s += '<polyline class="rl" id="fcReal" points="'+rp+'"/>';
+      s += '<polyline class="pj fx" id="fcProj" points="'+pj.join(" ")+'"/>';
+      s += '<g class="fx" id="fcLab"><line class="gl" x1="'+me.X(n)+'" x2="'+me.X(n)+'" y1="30" y2="150" stroke-dasharray="3 3"/><text class="tx" x="'+me.X(n)+'" y="24" text-anchor="middle">ahora</text>' +
+           '<text class="tv" x="340" y="'+(me.Y(P[12])-6)+'" text-anchor="end">plan 120</text><text class="tv" x="340" y="'+(me.Y(end)+16)+'" text-anchor="end">proyección ≈ '+end+'</text></g>';
+      el.innerHTML = '<div class="win"><div class="win-bar"><i></i><i></i><i></i><span>Avance del día contra el plan · ilustrativo</span></div><svg class="chart" viewBox="0 0 380 180" role="img" aria-label="Avance acumulado, plan y proyección al cierre con datos ficticios" style="padding:10px 6px 0">'+s+'</svg>' +
+        '<div class="legend"><span>Real</span><span class="lp">Plan</span><span class="lj">Proyección al ritmo actual</span></div></div>';
+      me.real_ = el.querySelector("#fcReal"); me.proj = el.querySelector("#fcProj"); me.lab = el.querySelector("#fcLab");
+      me.final();
+    },
+    final: function(){
+      this.real_.style.transition = "none"; this.real_.style.strokeDasharray = "none"; this.real_.style.strokeDashoffset = "0";
+      this.proj.style.transition = "none"; this.proj.style.opacity = 1; this.lab.style.transition = "none"; this.lab.style.opacity = 1;
+    },
+    play: function(){
+      var me = this, len = 600;
+      try{ len = me.real_.getTotalLength(); }catch(e){}
+      me.real_.style.transition = "none"; me.real_.style.strokeDasharray = len; me.real_.style.strokeDashoffset = len;
+      me.proj.style.transition = "none"; me.proj.style.opacity = 0; me.lab.style.transition = "none"; me.lab.style.opacity = 0;
+      later(function(){
+        me.real_.style.transition = "stroke-dashoffset 2.6s linear"; me.real_.style.strokeDashoffset = 0;
+        later(function(){ me.proj.style.transition = "opacity .8s"; me.proj.style.opacity = 1; me.lab.style.transition = "opacity .8s"; me.lab.style.opacity = 1; }, 2800);
+      }, 60);
+    }
+  };
+
+  /* ---------- carrusel ---------- */
+  var DEMOS = [
+    {tab:"Python · pandas", mod:PY, title:"Limpieza y análisis con Python y pandas", text:"Del archivo crudo al resumen: deduplicar, limpiar, agrupar y medir. El mismo enfoque que uso con NumPy, análisis exploratorio y análisis estadístico.", pts:["Limpieza de datos","Análisis exploratorio (EDA)","Agregaciones con groupby"]},
+    {tab:"Power BI", mod:BI, title:"Paneles al estilo Power BI", text:"Indicadores filtrables por canal y semana: leads, ventas y conversión. En el trabajo uso Power BI y DAX; esta recreación es ilustrativa.", pts:["KPIs que responden al filtro","Seguimiento por periodo","Detección de desviaciones"]},
+    {tab:"Hub BI · Power Apps", mod:HUB, title:"Hub BI con Power Apps", text:"Una aplicación que reúne varios reportes de Power BI en un solo punto de acceso, organizados por tema. La aplicación original es interna y no se publica; esta recreación usa nombres genéricos.", pts:["Un acceso por reporte","Menos pasos para llegar al dato","Seguimiento de procesos más ordenado"]},
+    {tab:"Power Automate · RPA", mod:FLOW, title:"Automatización con Power Automate y RPA", text:"Un archivo llega, se valida, se aplican las reglas y se carga al CRM. Cada paso deja evidencia y registro.", pts:["Integraciones con CRMs","APIs y RPA según el caso","Trazabilidad de cada ejecución"]},
+    {tab:"Exportación 60 → 4", mod:RACE, title:"Exportación: 60 minutos contra 4", text:"La comparación del caso real, a escala. Es una comparación de tiempos de ejecución, no un ahorro monetario.", pts:["56 minutos menos por ejecución","93,3 % menos tiempo","≈15 veces más rápido"]},
+    {tab:"Forecast", mod:FC, title:"Plan, real y proyección", text:"Seguimiento del avance del día contra el plan, con una proyección al cierre según el ritmo actual. Ejemplo ilustrativo, no un modelo estadístico específico.", pts:["Real contra estimado","Desviación a mitad del día","Proyección de cierre"]}
+  ];
+  var tabs = document.getElementById("dtabs"), slides = document.getElementById("slides"), demoEl = document.getElementById("demo");
+  var cur = 0, inView = false, playing = !RM, hover = false, autoId = 0;
+  DEMOS.forEach(function(d, i){
+    var b = document.createElement("button"); b.type = "button"; b.setAttribute("role", "tab"); b.id = "tab-" + i; b.setAttribute("aria-controls", "slide-" + i); b.textContent = d.tab;
+    b.onclick = function(){ setSlide(i, true); };
+    tabs.appendChild(b);
+    var s = document.createElement("div"); s.className = "slide"; s.id = "slide-" + i; s.setAttribute("role", "tabpanel"); s.setAttribute("aria-labelledby", "tab-" + i);
+    s.innerHTML = '<div class="slide-text"><span class="chip">Recreación · datos ficticios</span><h3>'+d.title+'</h3><p>'+d.text+'</p><ul>'+d.pts.map(function(p){ return '<li>'+p+'</li>'; }).join("")+'</ul></div><div class="stage"></div>';
+    slides.appendChild(s);
+    d.mod.build(s.querySelector(".stage"));
+  });
+  function setSlide(n, user){
+    stopAll();
+    cur = (n + DEMOS.length) % DEMOS.length;
+    if(user){ inView = true; }
+    Array.prototype.forEach.call(slides.children, function(s, i){ s.className = "slide" + (i === cur ? " on" : ""); });
+    Array.prototype.forEach.call(tabs.children, function(b, i){ b.setAttribute("aria-selected", i === cur ? "true" : "false"); b.tabIndex = i === cur ? 0 : -1; });
+    if(RM || !inView){ DEMOS[cur].mod.final(); } else { DEMOS[cur].mod.play(); }
+  }
+  setSlide(0, false);
+  document.getElementById("prevBtn").onclick = function(){ setSlide(cur - 1, true); };
+  document.getElementById("nextBtn").onclick = function(){ setSlide(cur + 1, true); };
+  var pb = document.getElementById("playBtn");
+  if(RM){ pb.hidden = true; }
+  pb.onclick = function(){ playing = !playing; pb.textContent = playing ? "Pausar" : "Reproducir"; };
+  demoEl.addEventListener("mouseenter", function(){ hover = true; });
+  demoEl.addEventListener("mouseleave", function(){ hover = false; });
+  demoEl.addEventListener("focusin", function(){ hover = true; });
+  demoEl.addEventListener("focusout", function(){ hover = false; });
+  if(!RM){ autoId = setInterval(function(){ if(playing && inView && !hover){ setSlide(cur + 1, false); } }, 10000); }
+  if("IntersectionObserver" in window){
+    new IntersectionObserver(function(es){
+      var vis = es[0].isIntersecting;
+      if(vis && !inView){ inView = true; setSlide(cur, false); }
+      else if(!vis && inView){ inView = false; stopAll(); DEMOS[cur].mod.final(); }
+    }, {threshold: 0.35}).observe(demoEl);
+  }
+
+  /* ---------- proyectos ---------- */
+  var CORE = [
+    "Reglas de negocio para selección, segmentación y distribución de registros.",
+    "Integración de archivos CSV, Excel y bases de datos.",
+    "Consultas SQL para extracción, clasificación y análisis.",
+    "Controles de consistencia y trazabilidad."
+  ];
+  var P = [
+    {id:"exportaciones", kind:"real", feature:true, demo:4,
+      title:"Automatización de exportaciones de bases de datos",
+      short:"Un proceso repetitivo de exportación de bases de gran volumen pasó de 60 a 4 minutos por ejecución.",
+      ctx:"Proceso operativo recurrente de exportación de bases de datos de gran volumen, dentro de la operación de campañas.",
+      prob:"Cada ejecución tomaba cerca de una hora. La tarea era repetitiva y ocupaba tiempo operativo en cada corrida, con un volumen de información alto.",
+      obj:"Reducir el tiempo de ejecución y quitar la carga repetitiva del proceso.",
+      sol:"Solución de automatización desarrollada con Python y herramientas de análisis de datos, sin datos internos en este sitio.",
+      tech:["Python","Pandas","SQL","Power BI","Visual Studio Code"],
+      met:"Las bases diarias superaban los 4 millones de registros y se distribuían en 25 bases por día. Un script las extrae y exporta de forma automatizada, en lugar de procesarlas manualmente una por una.",
+      res:["Tiempo anterior: 60 minutos. Tiempo posterior: 4 minutos.","Ahorro: 56 minutos por ejecución (93,3 % menos tiempo).","Velocidad de ejecución: aproximadamente 15 veces mayor."],
+      learn:["Optimización de tiempos de ejecución sobre bases de gran volumen con pandas y SQL.","Enfoque de procesos (Value Stream Mapping, ISO 9001) para identificar pasos manuales que no agregan valor.","Estandarización del proceso para que sea repetible y trazable.","Medición del antes y el después para sustentar la mejora."]},
+    {id:"grandes-volumenes", kind:"line", demo:0,
+      title:"Procesamiento de grandes volúmenes con Python y SQL",
+      short:"Preparación, transformación e integración de archivos y bases grandes con reglas de negocio claras.",
+      ctx:"Línea de trabajo orientada a preparar y procesar información de gran volumen para el análisis y la operación de campañas.",
+      prob:"Los archivos grandes y las fuentes dispersas hacen lento y propenso a errores el trabajo manual.",
+      obj:"Procesar la información de forma consistente, trazable y repetible.",
+      sol:CORE, tech:["Python","pandas","NumPy","SQL","CSV y Excel"],
+      met:"Se crearon más de 10 proyectos orientados a optimizar tiempo y recursos: agrupaciones de big data, cambios de estructura o de componentes, e implementación de UTMs y cambios de URLs.",
+      res:["Antes: procesos manuales de unos 15 minutos que requerían varios archivos o aplicaciones.","Después: un solo proyecto con un solo archivo, que se ejecuta en cerca de 1 minuto.","Reducción aproximada de 14 minutos por proceso, cerca de 93 % menos tiempo."],
+      learn:["Limpieza y transformación de datos con pandas y NumPy.","Análisis exploratorio (EDA) antes de rediseñar cada estructura.","Diseño de flujos de procesos para consolidar varios archivos y aplicaciones en un solo proyecto.","Trazabilidad de campañas con UTMs y control de URLs.","Priorización de proyectos según el tiempo y los recursos que liberan."]},
+    {id:"bi-power-bi", kind:"line", demo:1,
+      title:"Business Intelligence y dashboards con Power BI",
+      short:"Indicadores de seguimiento, monitoreo de objetivos y detección de desviaciones.",
+      ctx:"Línea de trabajo de seguimiento de indicadores para apoyar decisiones comerciales y operativas.",
+      prob:"Sin métricas claras y actualizadas, las desviaciones se detectan tarde.",
+      obj:"Dar visibilidad oportuna sobre resultados, objetivos y desviaciones.",
+      sol:["Dashboards de seguimiento de indicadores.","Construcción de métricas con DAX para apoyar decisiones.","Análisis por canal, segmento y periodo.","Seguimiento de objetivos y desviaciones."],
+      tech:["Power BI","DAX","Modelado de datos","Excel"],
+      met:"La vista de funnel se manejaba en Excel: tardaba más de 15 minutos en actualizarse y era lenta por el volumen de datos. Se migró a Power BI, que entregó el mismo resultado en 1 minuto y con un funnel más completo.",
+      res:["Mejor rendimiento de los KPIs en cada gestión comercial.","Conversiones que llegaron hasta 90 %.","Actualización del funnel: de más de 15 minutos en Excel a cerca de 1 minuto en Power BI."],
+      learn:["Modelado de datos y medidas en DAX.","Diseño de funnels y KPIs a partir de objetivos comerciales (Balanced Scorecard).","Elaboración de reportes claros para la toma de decisiones.","Criterio para migrar un reporte de Excel a Power BI cuando el volumen de datos lo exige."]},
+    {id:"hub-bi", kind:"line", demo:2, nores:true,
+      title:"Hub BI con Power Apps",
+      short:"Una aplicación que reúne varios reportes de Power BI en un solo punto de acceso, para ordenar el seguimiento.",
+      ctx:"Línea de trabajo de integración: unir reportes de Power BI dentro de una aplicación de Power Apps, organizada por tema.",
+      prob:"Los reportes viven en lugares distintos y llegar al correcto toma tiempo.",
+      obj:"Ofrecer un único punto de entrada a los reportes y simplificar el acceso para optimizar procesos de seguimiento.",
+      sol:["Aplicación en Power Apps con un acceso por reporte.","Reportes de Power BI organizados por tema.","Un punto de entrada común para el seguimiento."],
+      tech:["Power Apps","Power BI"],
+      met:"Las presentaciones individuales de cada reporte se unificaron en un solo Hub, con navegación fluida y sin lentitud ni intermitencias.",
+      learn:["Integración de Power Apps con reportes de Power BI.","Diseño centrado en el usuario, desde mi experiencia en experiencia de usuario.","Flujos de procesos: menos pasos para llegar a cada reporte.","Rendimiento y estabilidad de una aplicación que concentra varios reportes."]},
+    {id:"analitica-campanas", kind:"line", demo:1,
+      title:"Analítica de campañas y optimización comercial",
+      short:"Conversión, preventa, facturación, contactabilidad y productividad de agentes.",
+      ctx:"Línea de trabajo sobre el rendimiento de campañas comerciales y bases de clientes, desde los roles de marketing y data science.",
+      prob:"Entender qué campañas, canales, segmentos y fuentes de leads rinden mejor, y dónde se pierde oportunidad.",
+      obj:"Identificar mejoras de conversión, contactabilidad y productividad.",
+      sol:["Análisis de campañas comerciales y de la base de clientes.","Conversión, preventa y facturación.","Contactabilidad y productividad de agentes.","Evaluación de fuentes de leads y proveedores.","Resultados por canal, segmento y periodo."],
+      tech:["SQL","Power BI","Excel","Python"],
+      met:"Seguimiento de KPIs por campaña, canal y fuente de leads. Comparación contra el objetivo para detectar desviaciones. Ajustes sobre la distribución de leads y la capacidad de los asesores, y medición del resultado después de cada cambio.",
+      res:["Conversión: de 55 % a 90 %.","Cumplimiento del SLA de 1 minuto: de 35 % a 70 %.","Mejor ocupación del personal.","Menores tiempos operativos."],
+      learn:["Evaluación y negociación con socios comerciales y proveedores de leads.","Lectura de la base de clientes para segmentar y priorizar.","Análisis de campañas con Google Analytics y CRMs como Salesforce.","Comunicación asertiva para trasladar hallazgos a la operación y a los socios."]},
+    {id:"forecasting", kind:"line", demo:5,
+      title:"Forecasting, proyecciones y análisis de tendencias",
+      short:"Comparación entre resultado real y estimado, escenarios y seguimiento de desviaciones.",
+      ctx:"Línea de trabajo de proyecciones para apoyar la planificación. Incluye el forecasting financiero y el balanced scorecard que lideré como analista comercial senior.",
+      prob:"Planificar objetivos y recursos sin una estimación del cierre ni de las desviaciones.",
+      obj:"Proyectar resultados y evaluar el cumplimiento de objetivos con escenarios.",
+      sol:["Análisis de tendencias y estacionalidad.","Comparación entre resultados reales y estimados.","Escenarios y evaluación de objetivos.","Seguimiento de desviaciones."],
+      tech:["Excel"],
+      met:"Se compara de forma periódica el resultado real con el estimado. Se analizan tendencias y estacionalidad, se ajustan los supuestos y se hace seguimiento a las desviaciones hasta el cierre.",
+      res:["Desviaciones: de 7 % a 3 %.","Reducción de costos de 10 %."],
+      learn:["Forecasting y planificación financiera en Excel.","Balanced Scorecard para vincular las proyecciones con los objetivos.","Análisis estadístico para validar tendencias.","Gestión de riesgos en la planificación de recursos."]},
+    {id:"ia-aplicada", kind:"line", nomet:true, nores:true,
+      title:"Inteligencia artificial aplicada a procesos",
+      short:"Uso práctico de IA para mejorar procesos y explorar nuevas automatizaciones del negocio.",
+      ctx:"Línea de exploración de IA con foco empresarial, más allá de las herramientas conversacionales.",
+      prob:"Identificar dónde la IA aporta valor real a un proceso y dónde no.",
+      obj:"Incorporar IA a procesos para ahorrar tiempo y mejorar la calidad del análisis.",
+      sol:["Casos de uso evaluados contra un proceso concreto.","Integración con flujos de datos y automatización.","Administración de tareas y respuestas automáticas."],
+      tech:["Claude","n8n","Microsoft Copilot","ChatGPT","Gemini","Notion AI","Make"],
+      learn:["Planificación de proyectos y administración de tareas con apoyo de IA (Asana, Basecamp).","Flujos de procesos y respuestas automáticas con n8n.","Elaboración de reportes y resúmenes con asistentes de IA.","Criterio para decidir dónde la IA aporta valor y dónde se requiere revisión humana."]},
+    {id:"rpa-apis-power-automate", kind:"line", demo:3, nomet:true,
+      title:"RPA, APIs y Power Automate en CRMs",
+      short:"Automatización de procesos en CRMs con RPA, APIs e integraciones, usando Power Automate.",
+      ctx:"Línea de trabajo de automatización de procesos que implican cargar y mover información en CRMs, desde el rol de data science.",
+      prob:"Tareas manuales repetitivas en sistemas que no se conectan entre sí.",
+      obj:"Reducir tiempos operativos y pasar de procesos manuales a ejecuciones automatizadas.",
+      sol:["Power Automate para automatizar procesos en algunos CRMs.","RPA para los pasos que ocurren en pantalla.","APIs e integraciones entre sistemas.","Controles de consistencia y trazabilidad."],
+      tech:["Power Automate","RPA","APIs","Python","SQL"],
+      res:["Antes: crear una plantilla o subir una base al CRM tomaba unos 10 minutos por archivo.","Ahora: subir 10 archivos toma cerca de 10 minutos, es decir, cerca de 1 minuto por archivo.","Capacidad de carga aproximadamente 10 veces mayor."],
+      learn:["Integración con CRMs como Salesforce.","Mapeo de flujos de procesos para decidir qué automatizar con RPA y qué con API.","SQL y Python para preparar y validar los archivos antes de la carga.","Gestión de proyectos de automatización con Gantt, Asana y Basecamp."]}
+  ];
+
+  var grid = document.getElementById("grid");
+  P.forEach(function(p){
+    var a = document.createElement("a");
+    a.href = "#p-" + p.id;
+    a.className = "card" + (p.feature ? " feature" : "");
+    a.setAttribute("data-open", p.id);
+    var chip = p.kind === "real" ? '<span class="chip real">Caso real · resultado medido</span>' : '<span class="chip">Línea de trabajo</span>';
+    var left = '<div style="display:grid;gap:12px;min-width:0">' + chip + '<h3>' + p.title + '</h3><p>' + p.short + '</p><span class="more">Ver detalle →</span></div>';
+    var right = p.feature ? '<div class="kpis"><div class="kpi"><b>60→4</b><span>minutos por ejecución</span></div><div class="kpi"><b>−93,3%</b><span>tiempo de ejecución</span></div><div class="kpi"><b>≈15×</b><span>más rápido</span></div></div>' : '';
+    a.innerHTML = left + right;
+    grid.appendChild(a);
+  });
+
+  var PEND = "Por completar.";
+  var home = document.getElementById("home"), detail = document.getElementById("detail");
+  function list(items){ return "<ul>" + items.map(function(i){ return "<li>"+i+"</li>"; }).join("") + "</ul>"; }
+  function txt(v){ return v ? "<p>"+v+"</p>" : '<p class="pending">'+PEND+'</p>'; }
+  function sec(h, body, wide){ return '<div class="d-sec'+(wide?' wide':'')+'"><h2>'+h+'</h2>'+body+'</div>'; }
+
+  function showDetail(id){
+    var idx = P.findIndex(function(p){ return p.id === id; }); if(idx < 0){ return showHome(); }
+    var p = P[idx], nx = P[(idx+1) % P.length];
+    stopAll();
+    var pendRes = '<p class="pending">Por documentar con datos anonimizados y autorizados. No se presenta como proyecto ejecutado hasta contar con respaldo.</p>';
+    var sol = Array.isArray(p.sol) ? list(p.sol) : txt(p.sol);
+    var demoBtn = typeof p.demo === "number" ? '<button class="btn" type="button" id="demoBtn">Ver demo animada →</button>' : '';
+    detail.innerHTML = '<button class="back" type="button" id="backBtn">← Volver a proyectos</button>' +
+      '<div class="d-head"><span class="chip '+(p.kind==="real"?"real":"")+'">'+(p.kind==="real"?"Caso real · resultado medido":"Línea de trabajo")+'</span><h1>'+p.title+'</h1><p>'+p.short+'</p>'+demoBtn+'</div>' +
+      '<div class="d-grid">' +
+        sec("Contexto", txt(p.ctx)) + sec("Problema", txt(p.prob)) + sec("Objetivo", txt(p.obj)) +
+        sec("Solución desarrollada", sol) +
+        sec("Tecnologías utilizadas", list(p.tech), !!p.nomet) +
+        (p.nomet ? "" : sec("Metodología", txt(p.met))) +
+        (p.nores ? "" : sec("Resultados medibles", p.res ? list(p.res) : pendRes, true)) +
+        sec("Aprendizajes", Array.isArray(p.learn) ? list(p.learn) : txt(p.learn), true) +
+      '</div>' +
+      '<div class="d-nav"><button class="btn" type="button" id="backBtn2">← Todos los proyectos</button><a class="btn" href="#p-'+nx.id+'" data-open="'+nx.id+'">Siguiente: '+nx.title+' →</a></div>';
+    home.hidden = true; detail.hidden = false;
+    document.title = p.title + " · Eliezer Palpan León";
+    window.scrollTo(0, 0);
+    document.getElementById("backBtn").onclick = document.getElementById("backBtn2").onclick = function(){ go("#proyectos"); };
+    var db = document.getElementById("demoBtn");
+    if(db){ db.onclick = function(){ go("#demos"); setSlide(p.demo, true); }; }
+    detail.querySelectorAll("[data-open]").forEach(function(a){ a.onclick = function(e){ e.preventDefault(); go("#p-" + a.getAttribute("data-open")); }; });
+  }
+  function showHome(target){
+    detail.hidden = true; home.hidden = false; document.title = "Eliezer Palpan León";
+    if(target){ var el = document.querySelector(target); if(el){ el.scrollIntoView(); } } else { window.scrollTo(0, 0); }
+  }
+  function route(){
+    var h = location.hash || "";
+    if(h.indexOf("#p-") === 0){ showDetail(h.slice(3)); } else { showHome(h.length > 1 ? h : null); }
+  }
+  function go(h){ try{ location.hash = h; }catch(e){} route(); }
+  window.addEventListener("hashchange", route);
+  document.addEventListener("click", function(e){
+    var a = e.target.closest && e.target.closest("a[href^='#']"); if(!a){ return; }
+    var h = a.getAttribute("href");
+    if(a.hasAttribute("data-open") || a.hasAttribute("data-home") || h.indexOf("#p-") === 0){ e.preventDefault(); go(h); }
+  });
+  route();
+
+  var prog = document.getElementById("prog");
+  function upd(){ var h = document.documentElement, mx = h.scrollHeight - h.clientHeight; prog.style.width = (mx > 0 ? Math.min(100, window.scrollY/mx*100) : 0) + "%"; }
+  window.addEventListener("scroll", upd, {passive:true}); window.addEventListener("resize", upd); upd();
+
+  /* ---------- cálculos ---------- */
+  var before = 60, after = 4, saved = before - after;
+  document.getElementById("pct").textContent = dec(saved/before*100, 1) + " %";
+  document.getElementById("x").textContent = Math.round(before/after) + "×";
+  var f = document.getElementById("freq");
+  function sim(){
+    var n = +f.value, m = n*saved;
+    document.getElementById("freqOut").textContent = n;
+    document.getElementById("minWk").textContent = m + " min";
+    document.getElementById("hrWk").textContent = dec(m/60, 1) + " h";
+  }
+  f.addEventListener("input", sim); sim();
+
+  /* ---------- contacto ---------- */
+  if(CONTACT_EMAIL){
+    document.getElementById("mailRow").hidden = false;
+    document.getElementById("mailTxt").textContent = CONTACT_EMAIL;
+    document.getElementById("copyBtn").onclick = function(){
+      var b = this;
+      try{ navigator.clipboard.writeText(CONTACT_EMAIL).then(function(){ b.textContent = "Copiado"; }, function(){ b.textContent = "Selecciona el texto"; }); }
+      catch(e){ b.textContent = "Selecciona el texto"; }
+    };
+  }
+
+  /* ---------- tema ---------- */
+  document.getElementById("themeBtn").onclick = function(){
+    var r = document.documentElement, c = r.getAttribute("data-theme");
+    if(!c){ c = matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark"; }
+    r.setAttribute("data-theme", c === "dark" ? "light" : "dark");
+  };
+})();
+</script>
+
+</body>
+</html>
